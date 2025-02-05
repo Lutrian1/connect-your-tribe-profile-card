@@ -15,6 +15,12 @@ const personResponse = await fetch('https://fdnd.directus.app/items/person/' + p
 // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
 const personResponseJSON = await personResponse.json()
 
+const personDataCustom = personResponseJSON.data // geeft variable mee dat personData gelijk staat dus = aan de data uit de server
+
+personDataCustom.custom = JSON.parse(personDataCustom.custom) // custom field renderen als jason dus zodra ik in mijn html dit doorgeef rendered hij de json 
+
+console.log ('de date is geladen van custom')
+
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 // console.log(personResponseJSON)
@@ -40,12 +46,12 @@ app.set('views', './views')
 // In je visitekaartje was dit waarschijnlijk index.html
 app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-   response.render('index.liquid', {person: personResponseJSON.data})
+   response.render('index.liquid', {person: personDataCustom}) // geeft mee dat hij aan de liquid de personData moet geven
 })
 
 app.get('/oefenen', async function (request, response) {
-  // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-  response.render('oefenen.liquid', {person: personResponseJSON.data})
+  // Render oefenen.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+  response.render('oefenen.liquid', {person: personDataCustom}) // geeft mee dat hij aan de liquid de personData moet geven
 })
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
