@@ -1,30 +1,38 @@
 {% render 'partials/head.liquid' %}
 
-  <img src="images/background.png" alt="pasfoto" id="background">
-    <header>
-      <nav>
-        <a href="https://www.hva.nl/"><img src="images/hvalogo.png" alt="hvalogo" id="imghvalogo"></a>          
-        <h1>Hogeschool van Amsterdam</h1>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div class="linkersectie">
-          <h2>Naam</h2>
-          <p>Luuk Tol</p>
-          <h2>Beschrijving</h2>
-          <ul>
-            <li>FDND Student</li>
-            <li>Front-End Develepor</li>
-            <li>Producer</li>
-          </ul>
-        </div>
-        <div class="rechtersectie">
-          <img src="images/ikpic.jpg" alt="pasfoto" id="pasfoto">
-        </div>
-      </section>
-    </main>
-
-    {{ person.name }}
+<header>
+  <nav class="mainCard">
+    <div class="hvalogo">
+      <img src="images/hvalogo.png">
+      <h4>Amsterdam Uneversity of Applied Sciences</h4>
+    </div>
+    <article class="cardContent">
+      <h3>Name</h3>
+      <p>{{ person.name }}</p>
+      <h3>Studentnumber</h3>
+      <p>{{ person.custom.studentnumber }}</p>
+    </article>
+  </nav>
+</header>
+<main>
+  <section class="mainInfo">
+    <h1>Stuff about me</h1>
+    <ul>
+      <li>
+        <h2>Hobby's</h2>
+        <p>{{ person.custom.hobby }}</p>
+      </li>
+      <li>
+        <h2>Personal</h2>
+        <p>{{ person.custom.doublepersonal }}</p>
+      </li>
+      <li>
+        <h2>Work</h2>
+        <p>{{ person.custom.work }}</p>
+      </li>
+    </ul>
+    <button><a href = "{{person.custom.shamelessplug}}">My Links</a></button>
+  </section>
+</main>
 
 {% render 'partials/foot.liquid' %}

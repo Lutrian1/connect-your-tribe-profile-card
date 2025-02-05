@@ -26,7 +26,7 @@ body{
   padding: 3em;
 }
 
-body::before { /* lijn boven boven */
+.mainkaartje::before { /* lijn boven boven */
   content: '';
   position: absolute;
   top: 0;
@@ -38,7 +38,7 @@ body::before { /* lijn boven boven */
   z-index: 1; /* voor het plaatje */
 }
 
-body::after { /* lijn onder*/
+.mainkaartje::after { /* lijn onder*/
   content: '';
   position: absolute;
   margin-top: 2.6em;
