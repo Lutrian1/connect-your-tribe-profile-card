@@ -1,14 +1,28 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
-
-  <p>{{ Luuk.Tol }}</p>
-
-  <footer></footer>
-</article>
+  <img src="extras/img/background.png" alt="pasfoto" id="background">
+    <header>
+      <nav>
+        <a href="https://www.hva.nl/"><img src="extras/img/hvalogo.png" alt="hvalogo" id="imghvalogo"></a>          <h1>Hogeschool van Amsterdam</h1>
+      </nav>
+    </header>
+    <main>
+      <button>RGB Mode!!</button>
+      <section>
+        <div class="linkersectie">
+          <h2>Naam</h2>
+          <p>Luuk Tol</p>
+          <h2>Beschrijving</h2>
+          <ul>
+            <li>FDND Student</li>
+            <li>Front-End Develepor</li>
+            <li>Producer</li>
+          </ul>
+        </div>
+        <div class="rechtersectie">
+          <img src="extras/img/ikpic.jpg" alt="pasfoto" id="pasfoto">
+        </div>
+      </section>
+    </main>
 
 {% render 'partials/foot.liquid' %}
