@@ -2,15 +2,20 @@
 
 <header>
   <nav class="mainCard">
-    <div class="hvalogo">
-      <img src="images/hvalogo.png">
+    <div class="hvaLogo">
+      <img src="images/hvalogo.png" alt="" class="logo">
       <h4>Amsterdam Uneversity of Applied Sciences</h4>
     </div>
     <article class="cardContent">
-      <h3>Name</h3>
-      <p>{{ person.name }}</p>
-      <h3>Studentnumber</h3>
-      <p>{{ person.custom.studentnumber }}</p>
+      <div class="cardText">
+        <h3>Name</h3>
+        <p>{{ person.name }}</p>
+        <h3>Studentnumber</h3>
+        <p>{{ person.custom.studentnumber }}</p>
+      </div>
+      <div class="cardImage">
+        <img src="images/ikpic.jpg" alt="" class="photo">
+      </div>
     </article>
   </nav>
 </header>

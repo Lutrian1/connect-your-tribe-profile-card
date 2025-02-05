@@ -1,114 +1,60 @@
-* :not(#background){
-  color: Black;
-  font-family: Arial, Helvetica, sans-serif;
-  z-index: 1; /* alles behalve de achtergrond voor */
-}
-
-html{    
-  height: 100%;
-  background-color: rgb(240, 186, 255);
-  display: flex;
-  justify-content: center; 
-  align-items: center; /* Centerd body */
-  margin: 0;
-}
-
 body{
-  /* Position relative zodat hij kan staan in het midden */
-  position:fixed;
-  width:40em;
-  height:20em;
-  background-color: white;
-  border: solid;
-  border-color: black;
-  border-width: 0.3em;
-  border-radius: 25px;
-  padding: 3em;
+  margin: 0;
+  padding: 0;
 }
 
-.mainkaartje::before { /* lijn boven boven */
+header{
+  position: relative;
+  width: 520px;
+  height: 320px;
+  nav.mainCard{
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border: 5px solid;
+    border-radius: 40px;
+    .hvaLogo{
+      display: flex;
+      align-items: center;
+      margin: 40px 0px 0px 10px;
+      img.logo{
+        width: 44px;
+        height: 44px;
+      }
+    }
+    article.cardContent{
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+      .cardText{
+        margin: 0px;
+      }
+      .cardImage{
+        img.photo{
+          width: 110px;
+          height: 147px;
+        }
+      }
+    } /* styling voor nav */
+  }
+}
+
+nav::before { /* lijn boven boven */
   content: '';
   position: absolute;
-  top: 0;
-  left: 0; 
   width: 100%;
-  height: 2.5em; /* grootte */
+  height: 39px; /* grootte */
   background-color: black;
   border-radius: 18px 18px 0 0; /* radius alleen aan de bovenkant */
   z-index: 1; /* voor het plaatje */
 }
-
-.mainkaartje::after { /* lijn onder*/
+.mainCard::after { /* lijn boven boven */
   content: '';
   position: absolute;
-  margin-top: 2.6em;
-  left: 0; 
+  top: 282px;
   width: 100%;
-  height: 2.5em; /* grootte */
+  height: 39px; /* grootte */
   background-color: black;
   border-radius: 0 0 21px 21px; /* radius alleen aan de onderkant */
   z-index: 1; /* voor het plaatje */
-}
-
-section{
-  margin-top: 3em;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between; 
-}
-
-h1{
-  position: absolute;
-  margin-left: 2em;
-  margin-top: -0.1em;
-  font-size: 1.5em;
-}
-
-ul{
-   margin-left: 0.3em;
-}
-
-li{
-  margin-top: 0.5em;
-}
-
-#imghvalogo{
-  position: absolute;
-  width: 50px;
-  margin-left: -1em;
-  margin-top: -0.8em;
-}
-
-#background{
-  position: absolute;
-  width: 100%; /* 100% van de main */
-  margin: -3em; /* afstand van padding body eraf zodat ie perfect start bij het begin van de body */
-}
-
-.rechterselectie{
-  padding-right: 2em;
-}
-
-#pasfoto{
-  width: 150px;
-  border: 5px solid black;
-}
-
-nav{
-  margin-top: 1em;
-}
-
-button{
-  position: absolute;
-  margin: -10em;
-}
-
-.rgb1{
-  background-color: aqua;
-}
-
-
-.rgb2{
-  background-color: red;
 }
