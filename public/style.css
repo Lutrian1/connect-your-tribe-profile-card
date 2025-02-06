@@ -1,18 +1,35 @@
+html{
+  background-image: url(images/backgroundimage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
 body{
   margin: 0;
   padding: 0;
+  li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: #000000;
+  }
 }
 
 header{
+  display: flex;
+  justify-content: center;
   position: relative;
-  width: 520px;
-  height: 320px;
   nav.mainCard{
+    width: 520px;
+    height: 320px;
     background-image: url(images/background.png);
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
+    background-color: #FFFFFF;
     border: 5px solid;
     border-radius: 40px;
+    margin-top: 20px;
     .hvaLogo{
       display: flex;
       align-items: center;
@@ -33,28 +50,44 @@ header{
         img.photo{
           width: 110px;
           height: 147px;
+          border: 5px solid;
         }
       }
-    } /* styling voor nav */
+    } 
   }
 }
 
-nav::before { /* lijn boven boven */
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 39px; /* grootte */
-  background-color: black;
-  border-radius: 18px 18px 0 0; /* radius alleen aan de bovenkant */
-  z-index: 1; /* voor het plaatje */
+main{
+  display: flex;
+  justify-content: center;
+  section.mainInfo{
+    border: 10px solid;
+    border-radius: 40px;
+    width: 643px;
+    height: 473px;
+    background-color: #FFFFFF;
+  }
+  h1,ul{
+    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  h2{
+    margin-bottom: 30px;
+  }
+  .buttonPlacement{
+    display: flex;
+    justify-content: center;
+    button{
+      width: 148px;
+      height: 53px;
+      border: 5px solid;
+      border-radius: 15px;
+      background-color: #E8B2FA;
+      font-size: 24px;
+      margin: 0px 10px 0px 10px;
+    }
+  }
 }
-.mainCard::after { /* lijn boven boven */
-  content: '';
-  position: absolute;
-  top: 282px;
-  width: 100%;
-  height: 39px; /* grootte */
-  background-color: black;
-  border-radius: 0 0 21px 21px; /* radius alleen aan de onderkant */
-  z-index: 1; /* voor het plaatje */
-}
+
+/* Hover button animaties*/
